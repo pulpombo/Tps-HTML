@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Trabajo Practico 1 - HTML</title>
+
+    <script>
+        function Funcion1() {
+            var E1V1 = parseInt(document.getElementById('Valor1').value);
+            var E1V2 = parseInt(document.getElementById('Valor2').value);
+            var E1V3 = parseInt(document.getElementById('Valor3').value);
+
+            var E1V4 = (E1V1 + E1V2 + E1V3) / 3
+
+            alert("El promedio de los tres numeros es: " + E1V4);
+        }
+
+        function Funcion2() {
+            var E2V1 = parseInt(document.getElementById("Salario").value)
+
+            var E2V2 = (E2V1 / 2)
+
+            alert("El salario del primer socio es: " + E2V1)
+            alert("El salario del segundo y el tercero es: " + E2V2)
+        }
+
+        function Funcion3() {
+            var E3V1 = parseInt(document.getElementById("ValorHoras").value)
+            var E3V2 = parseInt(document.getElementById("Horas").value)
+
+            var E3V3 = (E3V1 * E3V2)
+
+            if (E3V3 >= 200) { E3V3 = E3V3 * 2 }
+            else if (E3V3 >= 160) { E3V3 = E3V3 * 1.5 }
+            else { E3V3 = E3V3 * 1 }
+
+            alert("El salario del empleado es: " + E3V3)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Ejercicio 1!!!!</h1>
+    <p>Este script va a usar 3 numeros ingresados por el usuario y calculara el promedio entre los 3</p>
+    <form name="Ej1">
+        <input type="text" id="Valor1" placeholder="Ingrese el primer valor">
+        <br>
+        <input type="text" id="Valor2" placeholder="Ingrese el segundo valor">
+        <br>
+        <input type="text" id="Valor3" placeholder="Ingrese el tercer valor">
+        <br>
+        <input type="button" id="Boton" value="Calcular" onclick="Funcion1()">
+    </form>
+
+    <h1>Ejercicio 2!!!!</h1>
+    <p>Este script va a calcular el salario de tres socios</p>
+    <form name="Ej2">
+        <input type="text" id="Salario" placeholder="Ingrese el salario del primer socio">
+        <br>
+        <input type="button" id="Boton2" value="Calcular" onclick="Funcion2()">
+        <br>
+    </form>
+
+    <h1>Ejercicio 3!!!!</h1>
+    <p>Este script tambien va a calcular un salario</p>
+    <form name="Ej3">
+        <input type="text" id="ValorHoras" placeholder="Ingrese el valor de horas de trabajo">
+        <br>
+        <input type="text" id="Horas" placeholder="Ingrese la cantidad de horas de trabajo">
+        <br>
+        <input type="button" id="Boton3" value="Calcular" onclick="Funcion3()">
+        <br>
+    </form>
+
+    <h1>Eso es todo por ahora!!!</h1>
+</body>
+</html>

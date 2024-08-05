@@ -1,0 +1,86 @@
+<html>
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Trabajo Practico 2 - HTML</title>
+
+  <script>
+    function FuncionE1() {
+
+      var E1V1 = parseInt(document.getElementById("Nota1").value)
+      var E1V2 = parseInt(document.getElementById("Nota2").value)
+      var E1V3 = parseInt(document.getElementById("Nota3").value)
+      var E1V4 = parseInt(document.getElementById("Nota4").value)
+
+      var E1V5 = ((E1V1 * 0.10) + (E1V2 * 0.25) + (E1V3 * 0.25) + (E1V4 * 0.40))
+
+      alert("La nota del estudiante es: " + E1V5)
+
+    }
+
+    function FuncionE2() {
+
+      var E2V1 = parseInt(document.getElementById("NumeroSillas").value)
+      var E2V2 = parseInt(document.getElementById("PrecioSillas").value)
+
+      if (E2V1 <= 5) { var E2V3 = (E2V1 * 50) }
+      else { var E2V3 = (E2V1 * E2V2) + (E2V1 * 60) }
+
+      alert("El salario del trabajador es de: " + E2V3)
+
+    }
+
+    function FuncionE3() {
+    
+      var E3V1 = parseInt(document.getElementById("Valor1").value)
+      var E3V2 = parseInt(document.getElementById("Valor2").value)
+      
+      if (E3V1>E3V2) { var E3V3=(E3V1-E3V2) }
+      else { var E3V3=(E3V2-E3V1) }
+      
+      alert("El resultado de la resta de numero mayor a menor es de: " + E3V3)
+
+    }
+
+  </script>
+</head>
+
+<body>
+
+  <h1>Ejercicio 1</h1>
+  <form name="E1">
+    <input type="text" id="Nota1" placeholder="Ingrese la primera nota">
+    <br>
+    <input type="text" id="Nota2" placeholder="Ingrese la segunda nota">
+    <br>
+    <input type="text" id="Nota3" placeholder="Ingrese la tercea nota">
+    <br>
+    <input type="text" id="Nota4" placeholder="Ingrese la cuarta nota">
+    <br>
+    <input type="button" id="Boton1" value="Calcular nota" onclick="FuncionE1()">
+    <br>
+  </form>
+  <h1>Ejercicio 2</h1>
+  <form name="E2">
+    <input type="text" id="NumeroSillas" placeholder="Ingrese la cantidad de sillas">
+    <br>
+    <input type="text" id="PrecioSillas" placeholder="Ingrese el precio de las sillas">
+    <br>
+    <input type="button" id="Boton2" value="Calcular salario" onclick="FuncionE2()">
+    <br>
+  </form>
+  <h1>Ejercicio 3</h1>
+  <form name="E3">
+    <input type="text" id="Valor1" placeholder="Ingrese el primer valor">
+    <br>
+    <input type="text" id="Valor2" placeholder="Ingrese el segundo valor">
+    <br>
+    <input type="button" id="Boton3" value="Calcular resta" onclick="FuncionE3()">
+    <br>
+  </form>
+</body>
+
+</html>
